@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Teste Frontend VAGAS.com</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <main class="box">
+    <header class="header">
+      <h1 class="title">Formulário<br />para compra de<br /><span>Pacote de Stickers</span></h1>
+    </header>
+    <form class="form" name="form-stickers">
+      <fieldset class="fieldset">
+        <p class="label" tabindex="1">Quais stickers?</p>
+        <label class="checkcontainer" id="react" aria-labelledby="reactInput"><input id="reactInput" type="checkbox"
+            value="react" name="select-stickers" aria-required="true" tabindex="2"><span
+            class="checkmark"></span>React</label>
+        <label class="checkcontainer" id="vue" aria-labelledby="vueInput"><input id="vueInput" type="checkbox"
+            value="vue" name="select-stickers" aria-required="true" tabindex="3"><span
+            class="checkmark"></span>Vue</label>
+        <label class="checkcontainer" id="angular" aria-labelledby="angularInput"><input id="angularInput"
+            type="checkbox" value="angular" name="select-stickers" aria-required="true" tabindex="4"><span
+            class="checkmark"></span>Angular</label>
+      </fieldset>
+      <fieldset class="fieldset">
+        <label class="label" for="stickers" tabindex="5">Quantos stickers de cada?</label>
+        <div class="counter">
+          <svg id="minus" xmlns="http://www.w3.org/2000/svg" width="42" height="42">
+            <path
+              d="M4.667 0A4.668 4.668 0 0 0 0 4.667v32.666A4.668 4.668 0 0 0 4.667 42h32.666A4.668 4.668 0 0 0 42 37.333V4.667A4.668 4.668 0 0 0 37.333 0H4.667zm28 23.333H9.333v-4.666h23.334v4.666z" />
+          </svg>
+          <input id="stickers" type="number" placeholder="0" aria-required="true" tabindex="6" />
+          <svg id="plus" xmlns="http://www.w3.org/2000/svg" width="42" height="42">
+            <path
+              d="M4.667 42h32.666A4.668 4.668 0 0 0 42 37.333V4.667A4.668 4.668 0 0 0 37.333 0H4.667A4.668 4.668 0 0 0 0 4.667v32.666A4.668 4.668 0 0 0 4.667 42zm4.666-23.333h9.334V9.333h4.666v9.334h9.334v4.666h-9.334v9.334h-4.666v-9.334H9.333v-4.666z" />
+          </svg>
+        </div>
+      </fieldset>
+      <fieldset class="fieldset">
+        <label for="descricao" class="label" tabindex="7">Observações:</label>
+        <textarea id="descricao" name="descricao" placeholder="Alguma dúvida? Recado?" tabindex="8"></textarea>
+      </fieldset>
+      <footer class="footer">
+        <p id="result"></p>
+        <button id="submit" aria-label="botao enviar formulario" tabindex="9">Enviar</button>
+      </footer>
+    </form>
+  </main>
+  <script src="index.js"></script>
+</body>
+
+</html>

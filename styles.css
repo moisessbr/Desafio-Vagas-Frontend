@@ -1,0 +1,252 @@
+@import url("https://rsms.me/inter/inter.css");
+
+html {
+  font-family: "Inter", sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rebeccapurple;
+  color: #071723;
+  padding: 5px;
+}
+
+.box {
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  box-shadow: 10px 22px 34px 0 rgba(0, 0, 0, 0.5);
+  margin: 30px auto;
+  overflow: hidden;
+  min-width: 310px;
+  max-width: 550px;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.header {
+  background: url(images/header.png) center right no-repeat;
+  background-size: cover;
+  height: 187px;
+  padding: 23px 36px;
+  width: 100%;
+}
+
+.header .title {
+  color: #fff;
+  font-size: 23px;
+  font-weight: 300;
+  line-height: 1.70;
+}
+
+.header .title span {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.form {
+  margin-top: 30px;
+}
+
+.form textarea {
+  background: #dde3e9;
+  border: 1px solid #2f3676;
+  border-radius: 8px;
+  color: #071723;
+  height: 140px;
+  padding: 16px;
+  resize: none;
+  width: 100%;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.fieldset {
+  padding: 0 32px;
+  border: none;
+  margin: 5px 0 5px 0;
+}
+
+.fieldset p{
+  margin-bottom: 10px;
+}
+
+.fieldset .counter{
+  margin-top: 10px;
+}
+
+.checkcontainer{
+  display: block;
+  position: relative;
+  margin: 5px;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 0px 0px 0px 20px;
+}
+
+.checkcontainer input {  
+opacity: 0;
+}
+
+.checkcontainer:focus {  
+  border: 1px solid #2f3676;
+}
+  
+
+.checkmark {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 25px;
+  width: 25px;
+  background-color: #2F3676;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.checkcontainer input:required ~ .checkmark {
+  background-color: #F59393;
+}
+
+.checkcontainer:hover input ~ .checkmark {
+  background-color: #191847;
+}
+
+.checkcontainer:hover input:disabled ~ .checkmark {
+  background-color: #C5CFD6;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkcontainer input:checked ~ .checkmark:after {
+  display: block;
+}
+
+
+.checkcontainer .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.counter svg {
+  fill: #2f3676;
+  cursor: pointer;
+}
+
+.counter svg:hover  {
+  fill: #191847;
+}
+
+.minus{
+  pointer-events: none;
+  fill: #C5CFD6!important;
+}
+
+.counter input {
+  position: relative;
+  text-align:center;
+  background: #dde3e9;
+  border: 1px solid #2f3676;
+  color: #071723;
+  border-radius: 7px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: bold;
+  margin: 0px;
+  width: 60px;
+  height: 42px;
+  top: -14px;
+  }
+
+  .counter input:required {
+    background: #F59393;
+    border: 1px solid #F33232;
+  }
+
+.footer {
+  padding: 32px;
+  background: #dde3e9;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer button {  
+  appearance: none;
+  background: #2f3676;
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+  padding: 10px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px 32px;
+  border: 2px solid #2f3676;
+}
+
+.footer p {
+  opacity: 0;
+  text-align: left;
+  font-size: 18px;
+  color: #00C57C;
+  line-height: 21px;
+  font-weight: 500;
+  margin: auto;
+  margin-left: 0px; 
+}
+
+.footer button:focus,
+.footer button:hover {
+  border: 2px solid #2f3676;
+  background: #191847;
+}
+.footer button:disabled {
+  border: 2px solid #555555;
+  background: #C5CFD6;
+  color: #555555;
+}
+
+@media screen and (max-width: 450px){
+  .box {
+    width: 90%;
+  }
+
+  .fieldset {
+    margin: 20px 0 20px 0;
+  }
+  
+  .checkcontainer {
+    margin: 20px auto;
+  }
+
+  #react, #vue, #angular {
+    padding-top: 5px;
+  }
+}
